@@ -13,6 +13,11 @@ public class HelloController {
     public TextField MultA;
     public TextField MultB;
     public Label CheckMult;
+    public Label LBLABdivide;
+    public Label lblRoots;
+    public TextField txtroots;
+    public Label lblgrade;
+    public TextField txtgrade;
     @FXML
     private Label welcomeText;
     public TextField Txtboxevenodd;
@@ -41,6 +46,25 @@ public class HelloController {
         int b = Integer.parseInt(MultB.getText());
         String Mult = Mathclass.MultCheck(a,b);
         CheckMult.setText(Mult);
+        String remainder = Mathclass.remainder(a,b);
+        LBLABdivide.setText(remainder);
 
+
+
+    }
+
+    public void handleRoots(ActionEvent actionEvent) {
+        int a = Integer.parseInt(txtroots.getText());
+        String roots = Mathclass.Roots(a);
+        lblRoots.setText(roots);
+
+    }
+
+    public void handleGrade(ActionEvent actionEvent) {
+        double a = Double.parseDouble(txtgrade.getText());
+        String grade = Mathclass.Grade(a);
+        lblgrade.setText(grade);
+
+        
     }
 }

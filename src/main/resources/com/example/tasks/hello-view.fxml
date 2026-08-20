@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="281.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasks.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300" minWidth="300" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasks.HelloController">
    <children>
       <Button layoutX="100.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleEvenOdd" text="even or odd" />
       <TextField fx:id="Txtboxevenodd" layoutX="66.0" layoutY="39.0" />
@@ -17,5 +17,11 @@
       <TextField fx:id="MultB" layoutX="168.0" layoutY="89.0" prefHeight="25.0" prefWidth="81.0" />
       <Label fx:id="CheckMult" layoutX="96.0" layoutY="139.0" text="Check if multiple" />
       <Label fx:id="LBLABdivide" layoutX="91.0" layoutY="156.0" text="A/B and remainder" />
+      <Button layoutX="72.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleRoots" text="Roots from discriminant" />
+      <Label fx:id="lblRoots" layoutX="129.0" layoutY="223.0" text="roots" />
+      <TextField fx:id="txtroots" layoutX="69.0" layoutY="198.0" />
+      <Button layoutX="101.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleGrade" text="Check Grade" />
+      <Label fx:id="lblgrade" layoutX="129.0" layoutY="296.0" text="Grade" />
+      <TextField fx:id="txtgrade" layoutX="69.0" layoutY="268.0" />
    </children>
 </AnchorPane>
