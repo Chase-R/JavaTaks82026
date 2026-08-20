@@ -28,8 +28,7 @@ public class HelloController {
 
     public void handleEvenOdd(ActionEvent actionEvent) {
         int EvenOddinput = Integer.parseInt(Txtboxevenodd.getText());
-        boolean temp = mathclass.checkEvenOdd(EvenOddinput);
-        if (temp) {
+        if (mathclass.checkEvenOdd(EvenOddinput)) {
             LblEvenOrOdd.setText("even");
         }else {
             LblEvenOrOdd.setText("odd");
