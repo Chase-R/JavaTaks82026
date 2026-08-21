@@ -18,6 +18,8 @@ public class HelloController {
     public TextField txtroots;
     public Label lblgrade;
     public TextField txtgrade;
+    public TextField txtBank;
+    public Label lblBalance;
     @FXML
     private Label welcomeText;
     public TextField Txtboxevenodd;
@@ -29,6 +31,7 @@ public class HelloController {
     }
 
     private Mathclass mathclass = new Mathclass();
+    private BankClass bankClass = new BankClass();
 
 
     public void handleEvenOdd(ActionEvent actionEvent) {
@@ -66,5 +69,17 @@ public class HelloController {
         lblgrade.setText(grade);
 
         
+    }
+
+    public void handleDeposit(ActionEvent actionEvent) {
+        int cash = Integer.parseInt(txtBank.getText());
+        double balance = BankClass.deposit(cash);
+        lblBalance.setText(String.valueOf(balance));
+    }
+
+    public void handleWithdrawl(ActionEvent actionEvent) {
+        int cash = Integer.parseInt(txtBank.getText());
+        double balance = BankClass.withdrawl(cash);
+        lblBalance.setText(String.valueOf(balance));
     }
 }
