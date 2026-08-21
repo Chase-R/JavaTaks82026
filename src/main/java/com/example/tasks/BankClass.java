@@ -16,8 +16,8 @@ public class BankClass {
     public static double interest(){
         if (balance > 0) {
             balance *= 1.1;
-            balance = Math.round(balance * 100);
-            balance /= 100;
+            balance = Math.round(balance * 100.0);
+            balance /= 100.0;
         }
         return balance;
     }

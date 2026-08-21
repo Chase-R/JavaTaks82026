@@ -79,7 +79,7 @@ public class HelloController {
 
     public void handleWithdrawl(ActionEvent actionEvent) {
         int cash = Integer.parseInt(txtBank.getText());
-        double balance = BankClass.withdrawl(cash);
+        double balance = bankClass.withdrawl(cash);
         lblBalance.setText(String.valueOf(balance));
     }
 }
