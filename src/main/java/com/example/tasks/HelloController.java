@@ -20,6 +20,10 @@ public class HelloController {
     public TextField txtgrade;
     public TextField txtBank;
     public Label lblBalance;
+    public TextField Coord1;
+    public TextField Coord2;
+    public Label mdpntlbl;
+    public Label slopelbl;
     @FXML
     private Label welcomeText;
     public TextField Txtboxevenodd;
@@ -32,6 +36,7 @@ public class HelloController {
 
     private Mathclass mathclass = new Mathclass();
     private BankClass bankClass = new BankClass();
+    private Coordsclass coordsclass = new Coordsclass();
 
 
     public void handleEvenOdd(ActionEvent actionEvent) {
@@ -81,5 +86,37 @@ public class HelloController {
         int cash = Integer.parseInt(txtBank.getText());
         double balance = bankClass.withdrawl(cash);
         lblBalance.setText(String.valueOf(balance));
+    }
+
+    public void handleMdptn(ActionEvent actionEvent) {
+        String coord1 = Coord1.getText();
+        int c1comma = coord1.indexOf(",");
+        int c1end = coord1.length() - 1;
+        int x1 = Integer.parseInt(coord1.substring(1,c1comma));
+        int y1 = Integer.parseInt(coord1.substring(c1comma+1,c1end));
+        System.out.println(x1 + y1);
+        String coord2 = Coord2.getText();
+        int c2comma = coord2.indexOf(",");
+        int c2end = coord2.length() - 1;
+        int x2 = Integer.parseInt(coord2.substring(1,c2comma));
+        int y2 = Integer.parseInt(coord2.substring(c2comma+1,c2end));
+        System.out.println(x2 + y2);
+        mdpntlbl.setText(Coordsclass.mdpoint(x1,x2,y1,y2));
+    }
+
+    public void handleSlope(ActionEvent actionEvent) {
+        String coord1 = Coord1.getText();
+        int c1comma = coord1.indexOf(",");
+        int c1end = coord1.length() - 1;
+        int x1 = Integer.parseInt(coord1.substring(1,c1comma));
+        int y1 = Integer.parseInt(coord1.substring(c1comma+1,c1end));
+        System.out.println(x1 + y1);
+        String coord2 = Coord2.getText();
+        int c2comma = coord2.indexOf(",");
+        int c2end = coord2.length() - 1;
+        int x2 = Integer.parseInt(coord2.substring(1,c2comma));
+        int y2 = Integer.parseInt(coord2.substring(c2comma+1,c2end));
+        System.out.println(x2 + y2);
+        slopelbl.setText(Coordsclass.slope(x1,x2,y1,y2));
     }
 }
